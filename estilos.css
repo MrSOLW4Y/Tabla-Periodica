@@ -1,0 +1,29 @@
+body { font-family: sans-serif; margin:0; padding:0; display:flex; flex-wrap:wrap; background:#f4f4f4; }
+.container { display:flex; flex-wrap:wrap; width:100%; margin-top:10px; }
+
+.tabla-wrapper { overflow-x:auto; flex:1 1 650px; margin:10px; }
+.tabla { display: grid; grid-template-columns: repeat(18, 60px); grid-gap: 4px; }
+.elemento { background: #eee; border:1px solid #aaa; text-align:center; padding:5px; cursor:pointer; transition:0.2s; border-radius:4px; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+.elemento:hover { background:#ccc; }
+.vacio { background:transparent; border:none; }
+
+.numero { font-size:8px; color:#555; }
+.simbolo { font-size:20px; font-weight:bold; }
+.nombre { font-size:11px; }
+
+.familia-1 { background-color: #FF6666; } 
+.familia-2 { background-color: #FFDEAD; } 
+.familia-3 { background-color: #FFD700; } 
+.familia-4 { background-color: #ADFF2F; } 
+.familia-5 { background-color: #87CEFA; } 
+.familia-6 { background-color: #FF69B4; } 
+.familia-7 { background-color: #B0E0E6; } 
+.familia-8 { background-color: #FFA500; } 
+.familia-10 { background-color: #D3D3D3; } 
+
+.filtros { display:flex; gap:10px; margin:10px; flex-wrap:wrap; }
+.filtros select, .filtros input { padding:5px; border-radius:4px; border:1px solid #aaa; }
+
+@media (max-width: 900px) {
+    .container { flex-direction:column; }
+}
