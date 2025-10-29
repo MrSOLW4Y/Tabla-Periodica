@@ -19,6 +19,7 @@ if (!$elemento) {
 // Si es llamada via AJAX, solo devolvemos contenido parcial
 if (isset($_GET['ajax'])): ?>
 <h2><?= $elemento['nombre'] ?> (<?= $elemento['simbolo'] ?>)</h2>
+    
 <ul>
     <li>Número atómico: <?= $elemento['numero_atomico'] ?></li>
     <li>Masa atómica: <?= $elemento['masa_atomica'] ?></li>
@@ -30,6 +31,8 @@ if (isset($_GET['ajax'])): ?>
     <li>Punto de fusión: <?= $elemento['punto_fusion'] ?> °C</li>
     <li>Punto de ebullición: <?= $elemento['punto_ebullicion'] ?> °C</li>
     <li>Descripción: <?= $elemento['descripcion'] ?></li>
+<img src="images/<?= $elemento['numero_atomico'] ?>.png"  alt="<?= $elemento['nombre'] ?>" class="img-elemento">
+
 </ul>
 <?php else: ?>
 <!DOCTYPE html>
@@ -37,6 +40,8 @@ if (isset($_GET['ajax'])): ?>
 <head>
 <meta charset="UTF-8">
 <title><?= $elemento['nombre'] ?></title>
+    <link rel="stylesheet" href="estilos.css">
+
 </head>
 <body>
 <h1><?= $elemento['nombre'] ?> (<?= $elemento['simbolo'] ?>)</h1>
@@ -51,6 +56,10 @@ if (isset($_GET['ajax'])): ?>
     <li>Punto de fusión: <?= $elemento['punto_fusion'] ?> °C</li>
     <li>Punto de ebullición: <?= $elemento['punto_ebullicion'] ?> °C</li>
     <li>Descripción: <?= $elemento['descripcion'] ?></li>
+    <img src="images/<?= $elemento['numero_atomico'] ?>.png" alt="<?= $elemento['nombre'] ?>" 
+     class="img-elemento">
+
+    
 </ul>
 <a href="index.php">Volver</a>
 </body>
